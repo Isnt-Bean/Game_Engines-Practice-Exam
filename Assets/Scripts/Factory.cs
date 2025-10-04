@@ -9,7 +9,5 @@ public abstract class Factory : MonoBehaviour
 
     public abstract void CreateStrong();
 
-    public abstract void CreateWeak();
-
     
 }

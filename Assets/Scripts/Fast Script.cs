@@ -1,24 +1,45 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
-public abstract class FastScript : Enemy
+public class FastScript : Enemy
 {
+    public float speed;
+    public int health = 10;
+    public Transform target;
     public override void Attack()
     {
-        Debug.Log("Fast script attacked");
+        //if the enemy comes into contact with the player (not the attack sphere)
+        
     }
 
     public override void Move()
     {
-
-    }
-
-    public override void Colour()
-    {
-        
+        //make the enemy fast
+        var step =  speed * Time.deltaTime; // calculate distance to move
+        transform.position = Vector3.MoveTowards(transform.position, target.position, step);
     }
 
     public override void Death()
     {
+        //make the enemy hae low health
         
+    }
+
+    void Update()
+    {
+        Move();
+    }
+
+    void Start()
+    {
+        target = GameObject.FindGameObjectWithTag("Player").transform;
+    }
+
+    void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Attack")
+        {
+            Destroy(gameObject);
+        }
     }
 }
