@@ -1,15 +1,23 @@
 using UnityEngine;
 
-public class WeakScript : MonoBehaviour
+public abstract class WeakScript : Enemy
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public override void Attack()
+    {
+        Debug.Log("Fast script attacked");
+    }
+
+    public override void Move()
+    {
+
+    }
+
+    public override void Colour()
     {
         
     }
 
-    // Update is called once per frame
-    void Update()
+    public override void Death()
     {
         
     }

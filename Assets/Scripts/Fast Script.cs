@@ -6,4 +6,19 @@ public abstract class FastScript : Enemy
     {
         Debug.Log("Fast script attacked");
     }
+
+    public override void Move()
+    {
+
+    }
+
+    public override void Colour()
+    {
+        
+    }
+
+    public override void Death()
+    {
+        
+    }
 }

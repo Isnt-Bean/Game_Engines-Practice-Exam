@@ -6,6 +6,13 @@ public class FactorySpawner : Factory
     public GameObject StrongPrefab;
     public GameObject WeakPrefab;
     
+    public float SpawnRate;
+
+    public bool createWeak = true;
+    
+    public bool createStrong;
+
+    public bool createFast;
     
     public override void CreateFast()
     {
