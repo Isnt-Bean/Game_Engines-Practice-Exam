@@ -28,6 +28,8 @@ public class Player : MonoBehaviour
             //end the game
             EndGame.SetActive(true);
         }
+        
+        //get player input to activate the attack
     }
 
     private void OnTriggerEnter(Collider other)

@@ -8,7 +8,7 @@ public class FactorySpawner : Factory
     
     public float SpawnRate;
     
-    
+    //instantiate the enemies
     
     public override void CreateFast()
     {
