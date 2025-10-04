@@ -2,12 +2,16 @@ using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using System.Collections;
+using TMPro;
+using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
 
     public int health = 100;
 
+    public TextMeshProUGUI healthText;
+    
     public GameObject Attack;
 
     public GameObject EndGame;
@@ -27,6 +31,7 @@ public class Player : MonoBehaviour
 
     void Update()
     {
+        healthText.text = health + " / 100";
         if (health <= 0)
         {
             //end the game
