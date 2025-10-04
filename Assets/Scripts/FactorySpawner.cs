@@ -1,23 +1,23 @@
 using UnityEngine;
-using Random = Unity.Mathematics.Random;
+using System.Collections;
 
 public class FactorySpawner : Factory
 {
     public GameObject FastPrefab;
     public GameObject StrongPrefab;
-    
-    public float SpawnRate;
-    
-    //instantiate the enemies
-    
-    public override void CreateFast()
+
+
+    public override Enemy CreateFast()
     {
         //this is where the code goes and is changed to fit what the game needs
-        GameObject fast = GameObject.Instantiate(FastPrefab, new Vector3(), Quaternion.identity);
+        GameObject fast = Instantiate(FastPrefab, new Vector3(Random.Range(-30.0f, 13.0f), 0.5f, Random.Range(-30.0f, -13.0f)), Quaternion.identity);
+        return fast.GetComponent<Enemy>();
     }/*-30, 13 to -30, -13 add random position on the platform*/
 
-    public override void CreateStrong()
+    public override Enemy CreateStrong()
     {
-        GameObject weak = GameObject.Instantiate(FastPrefab, new Vector3(), Quaternion.identity);
+        GameObject strong = Instantiate(StrongPrefab, new Vector3(Random.Range(30, 13), 0.5f, Random.Range(-30, 13)), Quaternion.identity);
+        return strong.GetComponent<Enemy>();
     }/*30, 13 to -30, 13 add random position on the platform*/
+    
 }

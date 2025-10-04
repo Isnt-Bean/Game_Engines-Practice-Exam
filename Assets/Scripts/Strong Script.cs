@@ -24,4 +24,11 @@ public class StrongScript : Enemy
     {
         target = GameObject.FindGameObjectWithTag("Player").transform;
     }
+    void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Attack")
+        {
+            Destroy(gameObject);
+        }
+    }
 }

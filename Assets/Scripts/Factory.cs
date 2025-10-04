@@ -5,9 +5,9 @@ using UnityEngine;
 public abstract class Factory : MonoBehaviour
 {
     
-    public abstract void CreateFast();
+    public abstract Enemy CreateFast();
 
-    public abstract void CreateStrong();
+    public abstract Enemy CreateStrong();
 
     
 }
