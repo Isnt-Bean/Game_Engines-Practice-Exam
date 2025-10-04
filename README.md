@@ -1,5 +1,5 @@
 Alexander Bean, 100927087
-Game Name: Force-Defence
+Game Name: Force-Defence. The gameplay loop is of survival, the player must activate the forcefield at the right time to survive the waves of enemies that come towards them.
 
 Reflection Q's: 
 The factory can create different enemy types with varying health and speed.
