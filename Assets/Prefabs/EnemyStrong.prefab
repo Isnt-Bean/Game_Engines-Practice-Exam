@@ -152,6 +152,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91c274bc0ca1fd64080f976681721870, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::StrongScript
-  speed: 1
+  speed: 2
   health: 20
   target: {fileID: 0}
